@@ -1,0 +1,13 @@
+{
+  "name"         : "node-red-contrib-sequencer",
+  "version"      : "0.0.1",
+  "description"  : "A node that sequences through several outputs, in order",
+  "dependencies": {
+  },
+  "keywords": [ "node-red" ],
+  "node-red"     : {
+    "nodes": {
+      "sample": "sequencer/sequencer.js"
+    }
+  }
+}

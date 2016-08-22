@@ -1,0 +1,57 @@
+<script type="text/javascript">
+    RED.nodes.registerType('sequencer',{
+        category: 'function',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value:""},
+            onPayload: {value:"1"},
+            offPayload: {value:"0"},
+            budget: {value:"100"},
+            topic1: {value:"sequence/1"},
+            time1: {value:"1"},
+            topic2: {value:"sequence/2"},
+            time2: {value:"1"},
+            topic3: {value:"sequence/3"},
+            time3: {value:"1"},
+            topic4: {value:"sequence/4"},
+            time4: {value:"1"},
+            topic5: {value:"sequence/5"},
+            time5: {value:"1"},
+            topic6: {value:"sequence/6"},
+            time6: {value:"1"}
+        },
+        inputs:1,
+        outputs:6,
+        icon: "file.png",
+        label: function() {
+            return this.name||"sequencer";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="sequencer">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-onPayload"><i class="icon-tag"></i> On Payload</label>
+        <input type="text" id="node-input-onPayload" placeholder="On Payload">
+    </div>
+    <div class="form-row">
+        <label for="node-input-offPayload"><i class="icon-tag"></i> Off Payload</label>
+        <input type="text" id="node-input-offPayload" placeholder="Off Payload">
+    </div>
+    <div class="form-row">
+        <label for="node-input-budget"><i class="icon-tag"></i> Budget Percentage</label>
+        <input type="text" id="node-input-budget" placeholder="Budget Percent">
+    </div>
+    <div class="form-row">
+        <label for="node-input-topic1"><i class="icon-tag"></i> Topic 1</label>
+        <input type="text" id="node-input-topic1" placeholder="Topic 1">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="sequencer">
+    <p>A node that triggers a sequence of events, one at a time.</p>
+</script>
